@@ -29,6 +29,25 @@
 
   gtag('config', 'AW-18214199130');
 </script>
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18214199130/eaXWCMrLh7kcENq-mu1D',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 
   </head>
   <body>
@@ -316,9 +335,9 @@
 
     <a
       class="whatsapp"
-      href="https://wa.me/917979077669?text=i%20want%20to%20know%20more.."
+      href="https://wa.me/917764969634?text=i%20want%20to%20know%20more.."
       aria-label="Chat on WhatsApp"
-      onclick="return gtag_report_conversion('https://wa.me/917979077669?text=i%20want%20to%20know%20more..');"
+      onclick="return gtag_report_conversion('https://wa.me/917764969634?text=i%20want%20to%20know%20more..');"
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -338,9 +357,9 @@
         <button class="image-popup-close" aria-label="Close popup">&times;</button>
         <a
           class="image-popup-link"
-          href="https://wa.me/917979077669?text=i%20want%20to%20know%20more.."
+          href="https://wa.me/917764969634?text=i%20want%20to%20know%20more.."
           aria-label="Chat with 5STAR on WhatsApp"
-          onclick="return gtag_report_conversion('https://wa.me/917979077669?text=i%20want%20to%20know%20more..');"
+          onclick="return gtag_report_conversion('https://wa.me/917764969634?text=i%20want%20to%20know%20more..');"
         >
           <img src="5STAR.png" alt="5STAR offer" />
         </a>
